@@ -21,7 +21,7 @@ jobs:
       run: pip install requests
 
     - name: M3U Listesini Olustur
-      run: python vavoo_resolver.py --full-m3u
+      run: python main.py --full-m3u
 
     - name: Degisiklikleri Kaydet ve Yukle
       run: |
