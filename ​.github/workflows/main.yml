@@ -2,8 +2,8 @@ name: Vavoo M3U Guncelleyici
 
 on:
   schedule:
-    - cron: '0 */12 * * *' # 12 saatte bir çalışır
-  workflow_dispatch: # Manuel çalıştırma butonu
+    - cron: '0 */12 * * *'
+  workflow_dispatch:
 
 jobs:
   build:
@@ -17,7 +17,7 @@ jobs:
       with:
         python-version: '3.10'
 
-    - name: Bağımlılıkları Yukle
+    - name: Bagimliliklari Yukle
       run: pip install requests
 
     - name: M3U Listesini Olustur
