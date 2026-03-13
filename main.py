@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-vavoo_resolver.py - TAM VERSİYON
-Tek kanal + TÜM ÜLKELER M3U
+vavoo_resolver.py - TÜRKİYE ÖZEL VERSİYON
+Sadece Türkiye kanallarını çeker ve M3U oluşturur.
 """
 
 import sys
@@ -11,9 +11,13 @@ import json
 import os
 import re
 
-# config/domains.json
-with open(os.path.join(os.path.dirname(__file__), 'config/domains.json'), encoding='utf-8') as f:
-    DOMAINS = json.load(f)
+# config/domains.json dosyasından ayarları oku
+try:
+    with open(os.path.join(os.path.dirname(__file__), 'config/domains.json'), encoding='utf-8') as f:
+        DOMAINS = json.load(f)
+except Exception:
+    DOMAINS = {}
+
 VAVOO_DOMAIN = DOMAINS.get("vavoo", "vavoo.to")
 
 def getAuthSignature():
@@ -21,7 +25,6 @@ def getAuthSignature():
         "user-agent": "okhttp/4.11.0",
         "accept": "application/json",
         "content-type": "application/json; charset=utf-8",
-        "content-length": "1106",
         "accept-encoding": "gzip"
     }
     data = {
@@ -30,32 +33,10 @@ def getAuthSignature():
         "locale": "de",
         "theme": "dark",
         "metadata": {
-            "device": {
-                "type": "Handset",
-                "brand": "google",
-                "model": "Nexus",
-                "name": "21081111RG",
-                "uniqueId": "d10e5d99ab665233"
-            },
-            "os": {
-                "name": "android",
-                "version": "7.1.2",
-                "abis": ["arm64-v8a", "armeabi-v7a", "armeabi"],
-                "host": "android"
-            },
-            "app": {
-                "platform": "android",
-                "version": "3.1.20",
-                "buildId": "289515000",
-                "engine": "hbc85",
-                "signatures": ["6e8a975e3cbf07d5de823a760d4c2547f86c1403105020adee5de67ac510999e"],
-                "installer": "app.revanced.manager.flutter"
-            },
-            "version": {
-                "package": "tv.vavoo.app",
-                "binary": "3.1.20",
-                "js": "3.1.20"
-            }
+            "device": {"type": "Handset", "brand": "google", "model": "Nexus", "name": "21081111RG", "uniqueId": "d10e5d99ab665233"},
+            "os": {"name": "android", "version": "7.1.2", "abis": ["arm64-v8a", "armeabi-v7a", "armeabi"], "host": "android"},
+            "app": {"platform": "android", "version": "3.1.20", "buildId": "289515000", "engine": "hbc85", "signatures": ["6e8a975e3cbf07d5de823a760d4c2547f86c1403105020adee5de67ac510999e"], "installer": "app.revanced.manager.flutter"},
+            "version": {"package": "tv.vavoo.app", "binary": "3.1.20", "js": "3.1.20"}
         },
         "appFocusTime": 0,
         "playerActive": False,
@@ -70,17 +51,8 @@ def getAuthSignature():
         "lastAppStart": 1743962904623,
         "ipLocation": "",
         "adblockEnabled": True,
-        "proxy": {
-            "supported": ["ss", "openvpn"],
-            "engine": "ss",
-            "ssVersion": 1,
-            "enabled": True,
-            "autoServer": True,
-            "id": "pl-waw"
-        },
-        "iap": {
-            "supported": False
-        }
+        "proxy": {"supported": ["ss", "openvpn"], "engine": "ss", "ssVersion": 1, "enabled": True, "autoServer": True, "id": "pl-waw"},
+        "iap": {"supported": False}
     }
     try:
         resp = requests.post("https://www.vavoo.tv/api/app/ping", json=data, headers=headers, timeout=15)
@@ -102,11 +74,10 @@ def get_channels(group=None):
         "mediahubmx-signature": signature
     }
     all_channels = []
-    groups = [group] if group else [
-        "Albania", "Arabia", "Balkans", "Bulgaria", "France", "Germany", "Italy",
-        "Netherlands", "Poland", "Portugal", "Romania", "Russia", "Spain", "Turkey",
-        "United Kingdom", "United States"
-    ]
+    
+    # SADECE TÜRKİYE KANALLARI İÇİN AYARLANDI
+    groups = ["Turkey"]
+    
     for g in groups:
         cursor = 0
         while True:
@@ -119,7 +90,8 @@ def get_channels(group=None):
                 resp = requests.post(f"https://{VAVOO_DOMAIN}/mediahubmx-catalog.json", json=data, headers=headers, timeout=12)
                 resp.raise_for_status()
                 r = resp.json()
-                all_channels.extend(r.get("items", []))
+                items = r.get("items", [])
+                all_channels.extend(items)
                 cursor = r.get("nextCursor")
                 if not cursor:
                     break
@@ -137,17 +109,15 @@ def normalize_vavoo_name(name):
     name = re.sub(r'\s+\.[a-zA-Z]$', '', name)
     return name.upper()
 
-# ====================== ANA KISIM ======================
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("Kullanım: python vavoo_resolver.py <kanal_adi> [--vavoo-iptv] [--full-m3u]", file=sys.stderr)
-        sys.exit(1)
-
-    # === TÜM ÜLKELER M3U ===
-    if "--full-m3u" in sys.argv:
-        print("[INFO] Tüm ülkelerden kanallar çekiliyor... (30-60 saniye sürebilir)")
+    # GitHub Actions üzerinden çalışırken genelde --full-m3u parametresi kullanılır
+    if "--full-m3u" in sys.argv or len(sys.argv) == 1:
+        print("[INFO] Türkiye kanalları çekiliyor...")
         channels = get_channels()
-        print(f"[INFO] {len(channels)} kanal bulundu. M3U oluşturuluyor...")
+        
+        if not channels:
+            print("[ERROR] Kanal bulunamadı!", file=sys.stderr)
+            sys.exit(1)
 
         with open("vavoo_full.m3u", "w", encoding="utf-8") as f:
             f.write("#EXTM3U\n")
@@ -157,60 +127,17 @@ if __name__ == "__main__":
                 if not url:
                     continue
                 real_link = resolve_to_vavoo_iptv(url, ch)
-                group = ch.get("group", "General")
+                group = ch.get("group", "Turkey")
                 f.write(f'#EXTINF:-1 group-title="{group}",{name}\n')
                 f.write(f"{real_link}\n")
-        print(f"✅ vavoo_full.m3u başarıyla oluşturuldu! ({len(channels)} kanal)")
-        sys.exit(0)
-
-    # === TEK KANAL MODU ===
-    input_arg = sys.argv[1]
-    use_vavoo_iptv = "--vavoo-iptv" in sys.argv
-    return_original = "--original-link" in sys.argv
-
-    if "vavoo.to" in input_arg and "/play/" in input_arg:
-        if use_vavoo_iptv:
-            input_arg = re.sub(r'https?://[^/]+/play/', 'https://vavoo.to/vavoo-iptv/play/', input_arg)
-        print(input_arg)
-        sys.exit(0)
-
-    wanted = normalize_vavoo_name(input_arg)
-    channels = get_channels()
-
-    found = None
-    for ch in channels:
-        if normalize_vavoo_name(ch.get('name', '')) == wanted:
-            found = ch
-            break
-    if not found:
-        for ch in channels:
-            clean = re.sub(r'\s+\.[a-zA-Z]$|\s+(HD|FHD|4K)$', '', ch.get('name', '').upper())
-            if wanted in clean or clean in wanted:
-                found = ch
-                break
-    if not found:
-        for ch in channels:
-            simple_name = re.sub(r'[^A-Z0-9]', '', ch.get('name', '').upper())
-            simple_wanted = re.sub(r'[^A-Z0-9]', '', wanted)
-            if simple_wanted in simple_name or simple_name in simple_wanted:
-                found = ch
-                break
-
-    if not found:
-        print("NOT_FOUND", file=sys.stderr)
-        sys.exit(2)
-
-    url = found.get('url')
-    if not url:
-        print("NO_URL", file=sys.stderr)
-        sys.exit(3)
-
-    if use_vavoo_iptv:
-        url = resolve_to_vavoo_iptv(url, found)
-
-    if return_original or use_vavoo_iptv:
-        print(url)
-        sys.exit(0)
-
-    resolved = None  # tek kanal resolve istersen buraya ekleyebilirsin
-    print(url)
+        print(f"✅ vavoo_full.m3u (Türkiye) başarıyla oluşturuldu! ({len(channels)} kanal)")
+    else:
+        # Tek kanal arama modu (Opsiyonel kullanım için)
+        input_arg = sys.argv[1]
+        wanted = normalize_vavoo_name(input_arg)
+        channels = get_channels()
+        found = next((ch for ch in channels if normalize_vavoo_name(ch.get('name', '')) == wanted), None)
+        if found and found.get('url'):
+            print(resolve_to_vavoo_iptv(found['url'], found))
+        else:
+            print("NOT_FOUND", file=sys.stderr)
