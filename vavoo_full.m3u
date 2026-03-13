@@ -29,8 +29,6 @@ https://vavoo.to/vavoo-iptv/play/473300573b9945e4c1fe4
 https://vavoo.to/vavoo-iptv/play/1064954896a21f89fb6b5c
 #EXTINF:-1 group-title="Turkey",4K TR: A SPOR HD .b
 https://vavoo.to/vavoo-iptv/play/1771137539fa2adff8ebd5
-#EXTINF:-1 group-title="Turkey",4K TR: A2 HD .b
-https://vavoo.to/vavoo-iptv/play/201905527745e40d41f657
 #EXTINF:-1 group-title="Turkey",4K TR: AK T TV HD .b
 https://vavoo.to/vavoo-iptv/play/344558568784e9a5583953
 #EXTINF:-1 group-title="Turkey",4K TR: ATV HD .b
@@ -55,16 +53,12 @@ https://vavoo.to/vavoo-iptv/play/41034540643b582da308f
 https://vavoo.to/vavoo-iptv/play/4017734592f45fd8456678
 #EXTINF:-1 group-title="Turkey",4K TR: DISNEY JUNIOR .b
 https://vavoo.to/vavoo-iptv/play/6492287228e9a72f932b5
-#EXTINF:-1 group-title="Turkey",4K TR: DMAX HD .b
-https://vavoo.to/vavoo-iptv/play/869937351ec185ded43b6
 #EXTINF:-1 group-title="Turkey",4K TR: DREAM T RK .b
 https://vavoo.to/vavoo-iptv/play/42666830256873dd1e7fac
 #EXTINF:-1 group-title="Turkey",4K TR: DUCK TV HD .b
 https://vavoo.to/vavoo-iptv/play/1709129189f694bdd416ac
 #EXTINF:-1 group-title="Turkey",4K TR: EKOL TV .b
 https://vavoo.to/vavoo-iptv/play/2706210049a80b69a6323c
-#EXTINF:-1 group-title="Turkey",4K TR: ENGLISH CLUB TV .b
-https://vavoo.to/vavoo-iptv/play/925055356337611dcda8b
 #EXTINF:-1 group-title="Turkey",4K TR: EPIC DRAMA .b
 https://vavoo.to/vavoo-iptv/play/6782616930c5115ad7507
 #EXTINF:-1 group-title="Turkey",4K TR: EUROSPORT 2 HD .b
@@ -83,6 +77,8 @@ https://vavoo.to/vavoo-iptv/play/11966263871c480a66a299
 https://vavoo.to/vavoo-iptv/play/4253369376912583d237b6
 #EXTINF:-1 group-title="Turkey",4K TR: HALK TV .b
 https://vavoo.to/vavoo-iptv/play/1320391955e6c5bb1bedb6
+#EXTINF:-1 group-title="Turkey",4K TR: KANAL 7 HD .b
+https://vavoo.to/vavoo-iptv/play/109266795988e12fc489b6
 #EXTINF:-1 group-title="Turkey",4K TR: KANAL D HD .b
 https://vavoo.to/vavoo-iptv/play/16776796840463f6dcff41
 #EXTINF:-1 group-title="Turkey",4K TR: KRT TV .b
@@ -229,6 +225,8 @@ https://vavoo.to/vavoo-iptv/play/81927269637ef82886825
 https://vavoo.to/vavoo-iptv/play/15619589713a6387b378e8
 #EXTINF:-1 group-title="Turkey",A SPOR FHD .b
 https://vavoo.to/vavoo-iptv/play/911836506e50aacc3a9e9
+#EXTINF:-1 group-title="Turkey",A SPOR HD .b
+https://vavoo.to/vavoo-iptv/play/2556711030587eed1d7123
 #EXTINF:-1 group-title="Turkey",A SPOR HEVC .b
 https://vavoo.to/vavoo-iptv/play/28805292086eedfe83d038
 #EXTINF:-1 group-title="Turkey",A SPOR RAW .b
@@ -417,6 +415,8 @@ https://vavoo.to/vavoo-iptv/play/30412456070b17d981e0ff
 https://vavoo.to/vavoo-iptv/play/26173183867663c6c36018
 #EXTINF:-1 group-title="Turkey",BEIN MOVIES ACTION 2 .s
 https://vavoo.to/vavoo-iptv/play/650851542129b8a3280b6
+#EXTINF:-1 group-title="Turkey",BEIN MOVIES FAMILY .c
+https://vavoo.to/vavoo-iptv/play/2485199152f30b65834b87
 #EXTINF:-1 group-title="Turkey",BEIN MOVIES FAMILY .s
 https://vavoo.to/vavoo-iptv/play/1322228068fac90faea203
 #EXTINF:-1 group-title="Turkey",BEIN MOVIES PREMIERE .c
@@ -565,14 +565,10 @@ https://vavoo.to/vavoo-iptv/play/4228481876db7dd6acf5b
 https://vavoo.to/vavoo-iptv/play/19675163050cdefd6160c5
 #EXTINF:-1 group-title="Turkey",BEST KOMEDI .b
 https://vavoo.to/vavoo-iptv/play/17233265984e83c5ef5947
-#EXTINF:-1 group-title="Turkey",BEST KORKU .b
-https://vavoo.to/vavoo-iptv/play/2298271695faed3c96249f
 #EXTINF:-1 group-title="Turkey",BEST LOCA 1 .b
 https://vavoo.to/vavoo-iptv/play/1063857052f07e2eec0c52
 #EXTINF:-1 group-title="Turkey",BEST LOCA 2 .b
 https://vavoo.to/vavoo-iptv/play/20264594681bd1479ca3f0
-#EXTINF:-1 group-title="Turkey",BEST LOCA 3 .b
-https://vavoo.to/vavoo-iptv/play/116873446031ff5e217441
 #EXTINF:-1 group-title="Turkey",BEST NETFLIX .b
 https://vavoo.to/vavoo-iptv/play/35317279904b909276b540
 #EXTINF:-1 group-title="Turkey",BEST SALON 1 .b
@@ -599,8 +595,6 @@ https://vavoo.to/vavoo-iptv/play/2758508882dd33978c7a5
 https://vavoo.to/vavoo-iptv/play/16003488113ad5cdfa73f1
 #EXTINF:-1 group-title="Turkey",BEYAZ TV HD .b
 https://vavoo.to/vavoo-iptv/play/2755756005a4ea6e7589ca
-#EXTINF:-1 group-title="Turkey",BEYAZ TV HEVC .b
-https://vavoo.to/vavoo-iptv/play/15107839012fa9f66fac00
 #EXTINF:-1 group-title="Turkey",BEYAZ TV RAW .b
 https://vavoo.to/vavoo-iptv/play/34349646843bc2da28db11
 #EXTINF:-1 group-title="Turkey",BILGILENDIRME .b
@@ -741,18 +735,12 @@ https://vavoo.to/vavoo-iptv/play/231764826926671978818a
 https://vavoo.to/vavoo-iptv/play/8847660680807874b7aa4
 #EXTINF:-1 group-title="Turkey",DINAMIK DRAM .b
 https://vavoo.to/vavoo-iptv/play/2706562550a39918648f3c
-#EXTINF:-1 group-title="Turkey",DINAMIK HABABAM SINIFI .b
-https://vavoo.to/vavoo-iptv/play/8797094591490f7f3982f
-#EXTINF:-1 group-title="Turkey",DINAMIK IMBD .b
-https://vavoo.to/vavoo-iptv/play/541406431f598c1d4030c
 #EXTINF:-1 group-title="Turkey",DINAMIK KEMAL SUNAL .b
 https://vavoo.to/vavoo-iptv/play/35716259918a5386829dd5
 #EXTINF:-1 group-title="Turkey",DINAMIK KOMEDI .b
 https://vavoo.to/vavoo-iptv/play/1764108510f341d0b9b2b3
 #EXTINF:-1 group-title="Turkey",DINAMIK KORKU .b
 https://vavoo.to/vavoo-iptv/play/4329132861bddbfa6bb96
-#EXTINF:-1 group-title="Turkey",DINAMIK LOCA-1 .b
-https://vavoo.to/vavoo-iptv/play/23555563787da76d74b520
 #EXTINF:-1 group-title="Turkey",DINAMIK LOCA-2 .b
 https://vavoo.to/vavoo-iptv/play/34187865064a204ff41a44
 #EXTINF:-1 group-title="Turkey",DINAMIK LOCA-3 .b
@@ -961,10 +949,6 @@ https://vavoo.to/vavoo-iptv/play/3515455741a6f5d78304a1
 https://vavoo.to/vavoo-iptv/play/24063236237528e0650313
 #EXTINF:-1 group-title="Turkey",ELIFIN RUYASI .b
 https://vavoo.to/vavoo-iptv/play/399108163294dea6002810
-#EXTINF:-1 group-title="Turkey",ENO AKSIYON 1 .s
-https://vavoo.to/vavoo-iptv/play/633768195851d6f914620
-#EXTINF:-1 group-title="Turkey",ENO ANIMASYON .s
-https://vavoo.to/vavoo-iptv/play/38337533385e11d005954b
 #EXTINF:-1 group-title="Turkey",ENO VIZYON 1 .s
 https://vavoo.to/vavoo-iptv/play/1949742603d0b9dbc5b085
 #EXTINF:-1 group-title="Turkey",ENO VIZYON 10 .s
@@ -997,6 +981,8 @@ https://vavoo.to/vavoo-iptv/play/1145503178453c24f6b22a
 https://vavoo.to/vavoo-iptv/play/1134525301f8ecc928b4b1
 #EXTINF:-1 group-title="Turkey",ER TV .b
 https://vavoo.to/vavoo-iptv/play/34986587209d7d94f684e5
+#EXTINF:-1 group-title="Turkey",ERCIS TV .c
+https://vavoo.to/vavoo-iptv/play/29014575503efc1f62c0c9
 #EXTINF:-1 group-title="Turkey",ERTV .c
 https://vavoo.to/vavoo-iptv/play/221836468186fc17b1865
 #EXTINF:-1 group-title="Turkey",ERZURUM WEB TV .c
@@ -1149,6 +1135,8 @@ https://vavoo.to/vavoo-iptv/play/1498459094c86300dd688c
 https://vavoo.to/vavoo-iptv/play/31503810386e1be804a835
 #EXTINF:-1 group-title="Turkey",FOX TV HD (H265) .b
 https://vavoo.to/vavoo-iptv/play/1345288490af706454a2b2
+#EXTINF:-1 group-title="Turkey",FOX TV HEVC .b
+https://vavoo.to/vavoo-iptv/play/2907081311ea1629502e0f
 #EXTINF:-1 group-title="Turkey",FOX TV RAW .b
 https://vavoo.to/vavoo-iptv/play/3839621464aa995fe048ce
 #EXTINF:-1 group-title="Turkey",FOX TV SD .b
@@ -1219,6 +1207,8 @@ https://vavoo.to/vavoo-iptv/play/32253354543986c7294970
 https://vavoo.to/vavoo-iptv/play/464378170623140c01606
 #EXTINF:-1 group-title="Turkey",HABER TURK HD .b
 https://vavoo.to/vavoo-iptv/play/2360854158813051c3c887
+#EXTINF:-1 group-title="Turkey",HABER TURK HEVC .b
+https://vavoo.to/vavoo-iptv/play/1857563183bcf218ac2da8
 #EXTINF:-1 group-title="Turkey",HABERTURK .c
 https://vavoo.to/vavoo-iptv/play/24027723806f7d250c32c3
 #EXTINF:-1 group-title="Turkey",HABERTURK HD .b
@@ -1809,10 +1799,10 @@ https://vavoo.to/vavoo-iptv/play/460410710474124d4550a
 https://vavoo.to/vavoo-iptv/play/33465497225b9857743b71
 #EXTINF:-1 group-title="Turkey",S SPORT .s
 https://vavoo.to/vavoo-iptv/play/37183362955b988ce99242
-#EXTINF:-1 group-title="Turkey",S SPORT 2 .c
-https://vavoo.to/vavoo-iptv/play/1313768516926dc999c43b
 #EXTINF:-1 group-title="Turkey",S SPORT 2 .s
 https://vavoo.to/vavoo-iptv/play/1234604880d226de6d47be
+#EXTINF:-1 group-title="Turkey",S SPORT+3 MAC SAATI .b
+https://vavoo.to/vavoo-iptv/play/3269372326de5ff1a4d9d7
 #EXTINF:-1 group-title="Turkey",S SPORT+4 MAC SAATI .b
 https://vavoo.to/vavoo-iptv/play/1507829436cb5aa4fb5b34
 #EXTINF:-1 group-title="Turkey",S SPORT+5 MAC SAATI .b
@@ -1991,14 +1981,14 @@ https://vavoo.to/vavoo-iptv/play/2478813774db6f05549bf2
 https://vavoo.to/vavoo-iptv/play/1771511397d05184d3e443
 #EXTINF:-1 group-title="Turkey",SPOR SMART 2 .c
 https://vavoo.to/vavoo-iptv/play/90716509593fd6426951b
-#EXTINF:-1 group-title="Turkey",SPOR SMART 2 HD .b
-https://vavoo.to/vavoo-iptv/play/2726496671ea6fd3c6dc54
 #EXTINF:-1 group-title="Turkey",SPOR SMART FHD .b
 https://vavoo.to/vavoo-iptv/play/37639315201c3521e36c44
 #EXTINF:-1 group-title="Turkey",SPOR SMART HD .b
 https://vavoo.to/vavoo-iptv/play/1313563350f4a25655e128
 #EXTINF:-1 group-title="Turkey",SPOR SMART HEVC .b
 https://vavoo.to/vavoo-iptv/play/3445708926e6195304f00c
+#EXTINF:-1 group-title="Turkey",SPOR SMART SD .b
+https://vavoo.to/vavoo-iptv/play/660246670c64f4ea57a46
 #EXTINF:-1 group-title="Turkey",SPORTS TV .c
 https://vavoo.to/vavoo-iptv/play/3422827985f7ff6e82532a
 #EXTINF:-1 group-title="Turkey",SPORTSTV HD .b
@@ -2059,6 +2049,8 @@ https://vavoo.to/vavoo-iptv/play/1489430754b4fd6e6dc327
 https://vavoo.to/vavoo-iptv/play/2307885365b7f1828e97ba
 #EXTINF:-1 group-title="Turkey",TABII SPOR 4 HD .b
 https://vavoo.to/vavoo-iptv/play/13759861713a771b4b4726
+#EXTINF:-1 group-title="Turkey",TABII SPOR 4 UHD .b
+https://vavoo.to/vavoo-iptv/play/408817539739fafefc9d3b
 #EXTINF:-1 group-title="Turkey",TABII SPOR 5 .c
 https://vavoo.to/vavoo-iptv/play/3035603077ef0df0e5da67
 #EXTINF:-1 group-title="Turkey",TABII SPOR 5 HD .b
@@ -2069,8 +2061,6 @@ https://vavoo.to/vavoo-iptv/play/383933219867eefb660622
 https://vavoo.to/vavoo-iptv/play/40820967253b1d74e19a7f
 #EXTINF:-1 group-title="Turkey",TABII SPOR 6 HD .b
 https://vavoo.to/vavoo-iptv/play/270984838ca5cfbf75daa
-#EXTINF:-1 group-title="Turkey",TABII SPOR 6 UHD .b
-https://vavoo.to/vavoo-iptv/play/37137089631c97c5b7ef8f
 #EXTINF:-1 group-title="Turkey",TABII SPOR HD .b
 https://vavoo.to/vavoo-iptv/play/225948008747f499d08214
 #EXTINF:-1 group-title="Turkey",TABII SPOR SD .b
@@ -2225,6 +2215,8 @@ https://vavoo.to/vavoo-iptv/play/566281043a6ce1d13e4fc
 https://vavoo.to/vavoo-iptv/play/10407066957b9356f79511
 #EXTINF:-1 group-title="Turkey",TRT 2 .s
 https://vavoo.to/vavoo-iptv/play/10988270778ea74cd28244
+#EXTINF:-1 group-title="Turkey",TRT 2 UHD .b
+https://vavoo.to/vavoo-iptv/play/200530513284b4baa30873
 #EXTINF:-1 group-title="Turkey",TRT 4K .c
 https://vavoo.to/vavoo-iptv/play/3317656516b0224418b6a8
 #EXTINF:-1 group-title="Turkey",TRT AVAZ .b
